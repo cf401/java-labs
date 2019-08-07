@@ -46,7 +46,6 @@ public class LibraryTest {
                 {5, 6, 5, 2, 5, 2, 7}
         };
         int[] expectedArr = new int[]{5, 6, 5, 2, 5, 2, 7};
-
-        assertTrue("contains dupe", classUnderTest.arrayArrayLowAverage(testArr) == expectedArr);
+        assertArrayEquals(expectedArr, classUnderTest.arrayArrayLowAverage(testArr) );
     }
 }
