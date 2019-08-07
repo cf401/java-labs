@@ -7,7 +7,6 @@ Write a function called flipNHeads that accepts an integer n and flips coins unt
 
 Write a method clock that uses Java’s built-in LocalDateTime object to constantly print out the current time to the console, second by second. The program should run until someone manually kills it with CTRL-C or presses the “stop” button in their IDE. Each time should only be printed once. Your program should detect when the seconds increase and only print something out when the timestamp changes.
 
-
 ## lab 2
 ```
 roll()
@@ -30,3 +29,6 @@ matt stuhring -- reminding me not to go crazy and use threads
 
 ## credits and contrubutions lab 2
 NA
+
+![some link](https://www.linkedin.com/in/jackdkinne/)
+
