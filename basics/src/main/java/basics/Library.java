@@ -3,7 +3,6 @@
 package basics;
 
 import java.util.Random;
-import java.util.Arrays;
 
 public class Library {
 
@@ -59,7 +58,6 @@ public class Library {
             }
             index++;
         }
-//        System.out.println( Arrays.toString( arr[indexOfLowest] ) );
         return arr[indexOfLowest];
     }
 }
