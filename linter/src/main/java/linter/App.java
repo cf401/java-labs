@@ -43,7 +43,7 @@ public class App {
 
                     System.out.println( end );
                     // if a line is missing a semicolon, and doesn't hit an acceptable condition:
-                    if(end != ';' && end !='{' && end == '}' && end != ' ' && !(line.contains("if")) && !(line.contains("else") ) ){
+                    if(end != ';' && end !='{' && end != '}' && end != ' ' && !(line.contains("if")) && !(line.contains("else") ) ){
                         //return with line number
                         String output = "Line " + lineNumber + ": Missing semicolon.";
                         return output;
