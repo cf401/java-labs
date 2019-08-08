@@ -4,6 +4,7 @@ package basics;
 import java.util.*;
 
 public class Lab03 {
+
 //Use the October Seattle weather data above.
 // Iterate through all of the data to find the min and max values.
 // Use a HashSet of type Integer to keep track of all the unique temperatures seen.
@@ -36,7 +37,6 @@ public class Lab03 {
                 output.append("Never saw temperature: " + i + "\n");
             }
         }
-        System.out.println(output.toString());
         return output.toString();
     }
 
@@ -46,16 +46,18 @@ public class Lab03 {
 
         int mostVotes = 0;
         String winner = "";
-        //get frequency of each item.
 
+        //iterate each voting option
         for (String x : votes){
+            //get frequency of each item.
             int freq = Collections.frequency(votes, x);
+            // if greater, assign new winner and count
             if (freq > mostVotes) {
                 mostVotes = freq;
                 winner = x;
             }
         }
-
+        //format output
         String output = winner + " received the most votes!";
         return output;
     }

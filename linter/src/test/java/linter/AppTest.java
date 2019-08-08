@@ -7,8 +7,12 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class AppTest {
-    @Test public void testAppHasAGreeting() {
+
+    @Test
+    public void lintSemi() {
         App classUnderTest = new App();
-        assertNotNull("app should have a greeting", classUnderTest.getGreeting());
+        String path = "./src/main/resources/gates.js";
+        String expected = "Line 6: Missing semicolon.";
+        assertEquals(classUnderTest.lintSemi(path), expected);
     }
 }
