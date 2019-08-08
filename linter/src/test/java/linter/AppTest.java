@@ -9,10 +9,35 @@ import static org.junit.Assert.*;
 public class AppTest {
 
     @Test
-    public void lintSemi() {
+    public void lintSemiErrorOnThree() {
         App classUnderTest = new App();
         String path = "./src/main/resources/gates.js";
         String expected = "Line 3: Missing semicolon.";
         assertEquals(classUnderTest.lintSemi(path), expected);
     }
+
+    @Test
+    public void lintSemiNoErrors() {
+        App classUnderTest = new App();
+        String path = "./src/main/resources/noErrors.js";
+        String expected = "File contains no missing semicolons.";
+        assertEquals(classUnderTest.lintSemi(path), expected);
+    }
+
+    @Test
+    public void lintSemiNull() {
+        App classUnderTest = new App();
+        String path = "./src/main/resources/null.js";
+        String expected = "file empty.";
+        assertEquals(classUnderTest.lintSemi(path), expected);
+    }
+
+    @Test
+    public void lintSemiWrongFile() {
+        App classUnderTest = new App();
+        String path = "./src/main/resources/SSSSSSSSS.js";
+        String expected = "The file was not found.";
+        assertEquals(classUnderTest.lintSemi(path), expected);
+    }
+
 }
