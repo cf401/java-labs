@@ -30,6 +30,7 @@ public class App {
 
         try{
             s = new Scanner(new BufferedReader(new FileReader(path)));
+            if(s.hasNextLine() == false) return "file empty.";
             while (s.hasNextLine()) {
                 if (s.hasNextLine() ){
 
@@ -57,7 +58,7 @@ public class App {
             }
         }
         catch (FileNotFoundException e ) {
-            System.out.println("The file was not found.");
+            return "The file was not found.";
         }
         return "File contains no missing semicolons.";
     }
