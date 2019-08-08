@@ -12,7 +12,7 @@ public class AppTest {
     public void lintSemi() {
         App classUnderTest = new App();
         String path = "./src/main/resources/gates.js";
-        String expected = "Line 6: Missing semicolon.";
+        String expected = "Line 3: Missing semicolon.";
         assertEquals(classUnderTest.lintSemi(path), expected);
     }
 }
