@@ -30,4 +30,5 @@ return formated string + line number.
 
 
 ## Credits and Contributions
-NA
+Nick Paro
+Brandon Hurrington
