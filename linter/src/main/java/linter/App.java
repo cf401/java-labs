@@ -27,6 +27,7 @@ public class App {
 
         Scanner s = null;
         int lineNumber = 0;
+        String output = "";
 
         try{
             s = new Scanner(new BufferedReader(new FileReader(path)));
@@ -42,12 +43,13 @@ public class App {
                     //if the line is not null, grab the last character.
                     if(line.length() > 0 ) end = line.charAt(line.length() - 1);
 
-                    System.out.println( end );
                     // if a line is missing a semicolon, and doesn't hit an acceptable condition:
                     if(end != ';' && end !='{' && end != '}' && end != ' ' && !(line.contains("if")) && !(line.contains("else") ) ){
                         //return with line number
-                        String output = "Line " + lineNumber + ": Missing semicolon.";
-                        return output;
+
+                        output = output + "Line " + lineNumber + ": Missing semicolon.\n";
+
+
 
                     }
                     //Don’t show an error if the line is empty.
@@ -60,7 +62,14 @@ public class App {
         catch (FileNotFoundException e ) {
             return "The file was not found.";
         }
-        return "File contains no missing semicolons.";
+
+        if (output.length() > 0){
+            return output;
+        }
+        else {
+            return "File contains no missing semicolons.";
+        }
+
     }
 
     public static void main(String[] args) {
