@@ -10,6 +10,7 @@ public class Review {
     String body;
     String author;
     int stars;
+    String movie;
 
     //constructor
     Review(String body, String author, int stars){
@@ -18,8 +19,16 @@ public class Review {
         this.stars = stars;
     }
 
+    //overloaded constructor
+    Review(String body, String author, int stars, String movie){
+        this.body = body;
+        this.author = author;
+        this.stars = stars;
+        this.movie = movie;
+    }
+
     //methods
-    public String print(){
+    public String toString(){
         String output = "author: " + this.author
                 + " body: " + this.body
                 + " stars: " + this.stars

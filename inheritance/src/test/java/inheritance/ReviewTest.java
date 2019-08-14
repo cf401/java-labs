@@ -19,14 +19,14 @@ public class ReviewTest {
 
     @Test
     public void print() {
-        String actual = one.print();
+        String actual = one.toString();
         String expected = "author: Michael Scott body: I loved the Dragon meat. stars: 3.";
         assertEquals(expected, actual);
     }
 
     @Test
     public void rConstructorTest() {
-        String actual = two.print();
+        String actual = two.toString();
         String expected = "author: Dwight Schrutt body: Almost like unicorn. stars: 3.";
         assertEquals(expected, actual);
     }

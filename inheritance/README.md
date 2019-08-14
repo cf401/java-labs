@@ -1,7 +1,8 @@
 # Challenge Summary
 <!-- Short summary or background information -->
-write a restaurant and review class, then have the first hold 
+- write a restaurant and review class, then have the first hold 
 instances of the second.
+- write a shop and theature class, add a list of movies to theature.  allow for reviews to be about movies. 
 
 ## Challenge Description
 <!-- Description of the challenge -->
@@ -17,6 +18,8 @@ instances of the second.
 //Test that your constructor is working reasonably.
 //Implement a reasonable toString method for Reviews.
 //Write a test to create an instance of Review and ensure that its toString is working properly.
+
+//write a shop and theature class, add a list of movies to theature.  allow for reviews to be about movies.
 ```
 
 ## Approach & Efficiency
@@ -25,6 +28,12 @@ create two classes.
 create print methods for both.
 restaurant contains an array of reviews.
 add method in rest changes star value by new review.
+
+create two additional classes.  
+create print methods.
+create print method for movie list.
+allow for reviews to be about movies with an overloaded constructor.
+implements interface for classes.
 
 ```
 data structure: arraylist
@@ -40,3 +49,4 @@ remove(0)
 ## Credits and Contributions
 Nick Paro
 Matt Stuhring
+Padmapriya Ganapathi
