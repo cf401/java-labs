@@ -31,4 +31,12 @@ public class Theater implements Reviewable {
         }
 
     }
+
+    public void addMovie(String movie){
+        this.movies.add(movie);
+    }
+
+    public void removeMovie(String movie){
+        this.movies.remove(movie);
+    }
 }

@@ -31,8 +31,14 @@ public class TheaterTest {
 
         tone.reviews.add(rwone);
         tone.reviews.add(rwtwo);
-
         ttwo.reviews.add(rwthree);
+
+        tone.addMovie("Blade 3");
+        tone.addMovie("Matrix");
+        tone.addMovie("Spiderman");
+
+        tone.removeMovie("Spiderman");
+
     }
 
     @Test
@@ -46,6 +52,20 @@ public class TheaterTest {
     public void addReviewTest() {
         String actual = ttwo.reviews.get(0).toString();
         String expected = "author: Jim Halbert body: Why would they even remake this again? stars: 1.";
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void addMovieTest() {
+        String actual = tone.movies.get(1);
+        String expected = "Matrix";
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void removeMovieTest() {
+        boolean actual = tone.movies.contains("Spiderman");
+        boolean expected = false;
         assertEquals(expected, actual);
     }
 }
