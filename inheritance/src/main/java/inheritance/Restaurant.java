@@ -9,7 +9,7 @@ package inheritance;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Restaurant {
+public class Restaurant implements Reviewable {
     //variables
     String name;
     int stars;
@@ -24,7 +24,8 @@ public class Restaurant {
     }
 
     //methods
-    public String print(){
+    @Override
+    public String toString(){
         String output = "name: " + this.name
                 + " stars: " + this.stars
                 + " price: " + this.price

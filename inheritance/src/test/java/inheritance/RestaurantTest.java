@@ -33,21 +33,21 @@ public class RestaurantTest {
 
     @Test
     public void print() {
-        String actual = rone.print();
+        String actual = rone.toString();
         String expected = "name: Darrells Dragon Meat stars: 4 price: $$$.";
         assertEquals(expected, actual);
     }
 
     @Test
     public void rConstructorTest() {
-        String actual = rtwo.print();
+        String actual = rtwo.toString();
         String expected = "name: Kraken's Bounty stars: 3 price: $$.";
         assertEquals(expected, actual);
     }
 
     @Test
     public void accessReviewInRestTest() {
-        String actual = rtwo.reviews.get(0).print();
+        String actual = rtwo.reviews.get(0).toString();
         String expected = "author: Jim Halbert body: I've tasted sawdust that was better. stars: 1.";
         assertEquals(expected, actual);
     }
@@ -60,7 +60,7 @@ public class RestaurantTest {
         //will change star value on rest
         rfour.addReview(rwfour);
 
-        String actual = rfour.print();
+        String actual = rfour.toString();
         String expected = "name: We Do Bacon stars: 5 price: $$.";
         assertEquals(expected, actual);
     }
